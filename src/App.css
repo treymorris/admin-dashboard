@@ -1,38 +1,186 @@
-.App {
-  text-align: center;
+:root {
+  --font-light: aliceblue;
+  --font-dark: black;
+  --border-color: black;
+  --bg-light: aliceblue;
+  --bg-medium: rgb(214, 224, 236);
+  --bg-dark: rgb(31, 28, 28);
+  --bg-color: rgb(57, 172, 243);
+  --bg-danger: red;
+  --bg-success: green;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img{
+  width: 45px;
+}
+body {
+  background-color: var(--bg-dark);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  width: 25vw;
+  border-radius: 50px;
+  border-style: none;
+  padding: .5em;
+  background-color: var(--bg-medium);
+  margin-right: 8em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.avatar-top {
+  margin-right: 2em;
+  width: 45px
+}
+
+.avatar-bottom{
+  margin-right: 1em;
+  margin-left: 3em;
+  width: 75px;
+}
+
+.btn-group{
+  margin-left: 10em;
+  width: 20vw;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dashboard {
+  grid-area: dashboard;
+}
+
+.home {
+  grid-area: home;
+}
+
+.profile {
+  grid-area: profile;
+}
+
+.messages {
+  grid-area: messages;
+}
+
+.history {
+  grid-area: history;
+}
+
+.tasks {
+  grid-area: tasks;
+}
+
+.communities {
+  grid-area: communities;
+}
+
+.settings {
+  grid-area: settings;
+}
+
+.support {
+  grid-area: support;
+}
+
+.privacy {
+  grid-area: privacy;
+}
+
+
+.sidenav {
+  background-color:var(--bg-color);
+  color:var(--font-light);
+  grid-area: sidenav;
+  display: grid;
+  grid-template: repeat(20, 50px) / auto;
+  grid-template-areas: 
+  "dashboard"
+  "dashboard"
+  " . "
+  "home"
+  "profile"
+  "messages"
+  "history"
+  "tasks"
+  "communities"
+  "."
+  "settings"
+  "support"
+  "privacy";
+}
+
+.navbar {
+  background-color: var(--bg-light);
+  grid-area: navbar;
+  display: grid;
+  }
+
+.navBtn {
+  border-radius: 50px;
+  width: 5vw;
+  padding: .5em;
+  background-color: var(--bg-color);
+  color: var(--font-light)
+}
+
+.card {
+  background-color: var(--bg-medium);
+  grid-area: card;
+}
+
+.infocard {
+  background-color: var(--bg-medium);
+  grid-area: infocard;
+}
+
+
+
+
+.container {
+  height: 100vh;
+  width: 75vw;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-areas: 
+  "sidenav navbar navbar navbar"
+  "sidenav card card infocard"
+  "sidenav card card infocard"
+  "sidenav card card infocard";
+}
+
+.box {
+  display: flex;
   align-items: center;
+  margin-left: 2em;
+}
+
+.box > h2 {
+  margin-left: 1em;
+}
+
+.box > h1 {
+  margin-left: .5em;
+}
+
+.nav-top {
+  display: flex;
+  align-items: center;
+}
+
+.nav-bottom {
+  display: flex;
+  align-items: center;
+}
+
+.notifications {
+  margin-right: 2em;
+}
+
+.main {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search {
+  margin-left: 2em;
+  margin-right: 1em;
 }
